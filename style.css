@@ -89,7 +89,7 @@ main {
   font-size: 0.8125em;
   font-weight: 500;
   line-height: 1.4;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.012em;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 .card__footer {
@@ -112,7 +112,7 @@ main {
   font-size: 0.8125em;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.012em;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 .card__release-date {
@@ -120,7 +120,7 @@ main {
   font-size: 0.8125em;
   font-weight: 500;
   line-height: 1.4;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.012em;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 .card__share-button {
