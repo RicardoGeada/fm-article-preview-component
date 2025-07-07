@@ -28,16 +28,16 @@
   --color-grey-500: #6e8098;
   --color-grey-400: #9daec2;
   --color-grey-200: #ecf2f8;
-  --spacing-0: 0px;
-  --spacing-200: 16px;
-  --spacing-300: 24px;
-  --spacing-400: 32px;
-  --spacing-500: 40px;
-  --spacing-600: 48px;
-  --spacing-700: 56px;
-  --spacing-800: 64px;
-  --spacing-1300: 104px;
-  --spacing-2000: 160px;
+  --spacing-0: 0rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
+  --spacing-1300: 6.5rem;
+  --spacing-2000: 10rem;
 }
 
 * {
@@ -61,41 +61,43 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   background-color: var(--color-white);
-  max-width: 327px;
+  max-width: 20.4375rem;
 }
 .card__image {
-  max-height: 200px;
+  max-height: 12.5rem;
   object-fit: cover;
   object-position: center;
 }
 .card__content {
-  padding: var(--spacing-400) 30px 18px;
+  padding: var(--spacing-400) 1.875rem 1.125rem;
 }
 .card__headline {
   margin-bottom: var(--spacing-300);
   color: var(--color-grey-900);
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.3;
-  letter-spacing: 0.015625em;
+  letter-spacing: 0.015625rem;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 .card__text {
   margin-bottom: var(--spacing-600);
   color: var(--color-grey-500);
-  font-size: 0.8125em;
+  font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.4;
-  letter-spacing: 0.012em;
+  letter-spacing: 0.012rem;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 .card__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-200);
 }
 .card__author {
   display: flex;
@@ -103,33 +105,63 @@ main {
   gap: var(--spacing-200);
 }
 .card__avatar {
-  width: 40px;
+  width: 2.5rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
 }
 .card__author-name {
   color: var(--color-grey-900);
-  font-size: 0.8125em;
+  font-size: 0.8125rem;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.012em;
+  letter-spacing: 0.012rem;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 .card__release-date {
   color: var(--color-grey-400);
-  font-size: 0.8125em;
+  font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.4;
-  letter-spacing: 0.012em;
+  letter-spacing: 0.012rem;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 .card__share-button {
-  width: 32px;
+  width: 2rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: var(--color-grey-200);
   outline: transparent;
   border: none;
+}
+.card__share-button img {
+  width: 0.9375rem;
+}
+@media (min-width: 48em) {
+  .card {
+    flex-direction: row;
+    max-width: 38rem;
+  }
+  .card__image {
+    max-height: unset;
+    max-width: 14.3125rem;
+  }
+  .card__content {
+    padding: 2rem 2.5625rem 2.25rem;
+  }
+  .card__text {
+    margin-bottom: var(--spacing-300);
+  }
+}
+@media (min-width: 67.5em) {
+  .card {
+    max-width: 45.625rem;
+  }
+  .card__image {
+    max-width: 17.8125rem;
+  }
+  .card__content {
+    padding: 1.875rem var(--spacing-500);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

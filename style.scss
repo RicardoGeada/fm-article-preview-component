@@ -9,16 +9,16 @@
   --color-grey-200: #ecf2f8;
 
   // === spacing ===
-  --spacing-0: 0px;
-  --spacing-200: 16px;
-  --spacing-300: 24px;
-  --spacing-400: 32px;
-  --spacing-500: 40px;
-  --spacing-600: 48px;
-  --spacing-700: 56px;
-  --spacing-800: 64px;
-  --spacing-1300: 104px;
-  --spacing-2000: 160px;
+  --spacing-0: 0rem;
+  --spacing-200: 1rem;        // 16px
+  --spacing-300: 1.5rem;      // 24px
+  --spacing-400: 2rem;        // 32px
+  --spacing-500: 2.5rem;      // 40px
+  --spacing-600: 3rem;        // 48px
+  --spacing-700: 3.5rem;      // 56px
+  --spacing-800: 4rem;        // 64px
+  --spacing-1300: 6.5rem;     // 104px
+  --spacing-2000: 10rem;      // 160px
 }
 
 * {
@@ -42,19 +42,19 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 0.625rem; // 10px
   overflow: hidden;
   background-color: var(--color-white);
-  max-width: 327px;
+  max-width: 20.4375rem; // 327px
 
   &__image {
-    max-height: 200px;
+    max-height: 12.5rem; // 200px
     object-fit: cover;
     object-position: center;
   }
 
   &__content {
-    padding: var(--spacing-400) 30px 18px;
+    padding: var(--spacing-400) 1.875rem 1.125rem; // 30px, 18px
   }
 
   &__headline {
@@ -73,6 +73,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-200);
   }
 
   &__author {
@@ -82,7 +84,7 @@ main {
   }
 
   &__avatar {
-    width: 40px;
+    width: 2.5rem; // 40px
     aspect-ratio: 1 / 1;
     border-radius: 100%;
   }
@@ -98,11 +100,46 @@ main {
   }
 
   &__share-button {
-    width: 32px;
+    width: 2rem; // 32px
     aspect-ratio: 1 / 1;
     border-radius: 100%;
     background-color: var(--color-grey-200);
     outline: transparent;
     border: none;
+
+    img {
+      width: 0.9375rem;
+    }
+  }
+
+
+  @media (min-width: 48em) {
+    flex-direction: row;
+    max-width: 38rem; // 608px
+
+    &__image {
+      max-height: unset;
+      max-width: 14.3125rem; // 229px
+    }
+
+    &__content {
+       padding: 2rem 2.5625rem 2.25rem; // 32px 41px 36px
+    }
+
+    &__text {
+      margin-bottom: var(--spacing-300);
+    }
+  }
+
+  @media (min-width: 67.5em) {
+    max-width: 45.625rem; // 730px
+
+    &__image {
+      max-width: 17.8125rem; // 285px
+    }
+
+    &__content {
+      padding: 1.875rem var(--spacing-500); // 30px
+    }
   }
 }
