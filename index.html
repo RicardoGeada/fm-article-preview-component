@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Article preview component</title>
 
@@ -28,11 +28,13 @@
     </style>
   </head>
   <body>
-
     <main>
-
       <article class="card">
-        <img class="card__image" src="./images/drawers.jpg" alt="A picture of a drawer." />
+        <img
+          class="card__image"
+          src="./images/drawers.jpg"
+          alt="A picture of a drawer."
+        />
         <div class="card__content">
           <h1 class="card__headline">
             Shift the overall look and feel by adding these wonderful touches to
@@ -45,19 +47,52 @@
           </p>
           <footer class="card__footer">
             <div class="card__author">
-              <img class="card__avatar" src="./images/avatar-michelle.jpg" alt="Portrait of Michelle Appleton">
+              <img
+                class="card__avatar"
+                src="./images/avatar-michelle.jpg"
+                alt="Portrait of Michelle Appleton"
+              />
               <div>
                 <p class="card__author-name">Michelle Appleton</p>
-                <time class="card__release-date" datetime="2020-06-28">28 Jun 2020</time>
+                <time class="card__release-date" datetime="2020-06-28"
+                  >28 Jun 2020</time
+                >
               </div>
             </div>
-            <button class="card__share-button" aria-label="Share this article">
-              <img src="./images/icon-share.svg" alt="" aria-hidden="true">
+            <button class="card__share-button card__share-button--active" aria-label="Share this article">
+              <img src="./images/icon-share.svg" alt="" aria-hidden="true" />
             </button>
           </footer>
+
+          <!-- toast / snackbar -->
+          <div class="toast">
+            <span>SHARE</span>
+            <div class="toast__buttons">
+              <button aria-label="Share on facebook">
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+              <button aria-label="Share on twitter">
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+              <button aria-label="Share on pinterest">
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
+          </div>
         </div>
       </article>
-
     </main>
 
     <!-- <div class="attribution">
