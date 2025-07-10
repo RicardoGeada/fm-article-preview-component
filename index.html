@@ -17,27 +17,18 @@
 
     <title>Frontend Mentor | Article preview component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
+
   <body>
     <main>
-      <article class="card">
+      <article class="card" aria-labelledby="headline">
         <img
           class="card__image"
           src="./images/drawers.jpg"
           alt="A picture of a drawer."
         />
         <div class="card__content">
-          <h1 class="card__headline">
+          <h1 class="card__headline" id="headline">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </h1>
@@ -67,11 +58,13 @@
                 class="card__share-button"
                 aria-label="Share this article"
                 id="shareButton"
+                aria-expanded="false"
+                aria-controls="toast"
               >
                 <img src="./images/icon-share.svg" alt="" aria-hidden="true" />
               </button>
 
-              <div class="toast" id="toast">
+              <div class="toast" id="toast" role="dialog" aria-live="polite" aria-hidden="true">
                 <span>SHARE</span>
                 <div class="toast__buttons">
               <button aria-label="Share on facebook">
@@ -103,12 +96,5 @@
         </div>
       </article>
     </main>
-
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
   </body>
 </html>
