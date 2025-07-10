@@ -48,10 +48,10 @@ button {
 
 .card {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   border-radius: 0.625rem; // 10px
-  overflow: hidden;
   background-color: var(--color-white);
   max-width: 20.4375rem; // 327px
 
@@ -109,7 +109,7 @@ button {
 
   &__share-button {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 2rem; // 32px
     aspect-ratio: 1 / 1;
     border-radius: 100%;
@@ -131,12 +131,14 @@ button {
   }
 
   @media (min-width: 48em) {
+    overflow: visible;
     flex-direction: row;
     max-width: 38rem; // 608px
 
     &__image {
       max-height: unset;
       max-width: 14.3125rem; // 229px
+      border-radius: 0.625rem 0 0 0.625rem; // 10px
     }
 
     &__content {
@@ -146,6 +148,10 @@ button {
     &__text {
       margin-bottom: var(--spacing-300);
     }
+
+    &__share-button-container {
+    position: relative;
+  }
   }
 
   @media (min-width: 67.5em) {
@@ -163,6 +169,7 @@ button {
 
 .toast {
   position: absolute;
+  z-index: 1;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -180,5 +187,29 @@ button {
     display: flex;
     align-items: center;
     gap: var(--spacing-200);
+  }
+
+  @media (min-width: 48em) {
+    width: fit-content;
+    height: fit-content;
+    padding:  1rem 2,4375rem; // 16px 39px
+    border-radius: 10px;
+    top: -5.25rem; // 84px
+    bottom: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    &__buttons:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left:  12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 12px solid var(--color-grey-900);
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

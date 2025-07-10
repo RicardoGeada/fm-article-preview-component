@@ -66,7 +66,7 @@ $text-presets: (
         letter-spacing: map.get($preset, letter-spacing);
         font-family: map.get($preset, family);
         @if map.has-key($preset, text-transform) {
-            text-transform: map-get($preset, text-transform);
+            text-transform: map.get($preset, text-transform);
         }
     }
 }
