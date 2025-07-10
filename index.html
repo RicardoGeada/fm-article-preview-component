@@ -13,6 +13,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
 
     <title>Frontend Mentor | Article preview component</title>
 
@@ -63,13 +64,14 @@
             <div class="card__share-button-container">
 
               <button
-                class="card__share-button card__share-button--active"
+                class="card__share-button"
                 aria-label="Share this article"
+                id="shareButton"
               >
                 <img src="./images/icon-share.svg" alt="" aria-hidden="true" />
               </button>
 
-              <div class="toast">
+              <div class="toast" id="toast">
                 <span>SHARE</span>
                 <div class="toast__buttons">
               <button aria-label="Share on facebook">
@@ -95,7 +97,7 @@
               </button>
               </div>
 
-            </div>
+              </div>
             </div>
           </footer>
         </div>
